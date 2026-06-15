@@ -23,14 +23,15 @@ When drowsiness is detected, an alarm is triggered to alert the driver.
 - Arduino Uno
 
 ## Run
+
 ```bash
 python real_time.py
-
-
+```
 
 ## Authors
-Abdelhakim Nabil
-Ahmed Alham
-Ahd Malik
-Magy Romani
-Mariam Magdy 
+- Abdelhakim Nabil
+- Ahmed Alham
+- Ahd Malik
+- Magy Romani
+- Mariam Magdy
+- Abla Abdelmoneim
