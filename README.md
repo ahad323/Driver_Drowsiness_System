@@ -14,12 +14,6 @@ The system analyzes facial landmarks, eye closure duration, yawning frequency, a
 
 ---
 
-## Hardware Setup
-
-![Hardware Setup](images/hardware_setup.png)
-
----
-
 ## Features
 
 - Real-Time Face Detection
@@ -35,31 +29,27 @@ The system analyzes facial landmarks, eye closure duration, yawning frequency, a
 
 ## System Architecture
 
+```text
 Camera Input
-
-↓
-
+     │
+     ▼
 Face Detection
-
-↓
-
+     │
+     ▼
 Facial Landmark Extraction
-
-↓
-
+     │
+     ▼
 EAR & MAR Calculation
-
-↓
-
+     │
+     ▼
 Drowsiness Analysis
-
-↓
-
+     │
+     ▼
 Alert Generation
-
-↓
-
+     │
+     ▼
 Arduino Warning System
+```
 
 ---
 
@@ -119,9 +109,17 @@ python real_time.py
 
 ## Project Screenshots
 
+### Hardware Integration
+
+<img src="images/hardware_setup.png" width="450">
+
+The system is connected to an Arduino Uno board that activates warning indicators and alarm signals when drowsiness is detected.
+
+---
+
 ### Drowsiness Detection
 
-![Drowsiness Detection](images/drowsiness_detection.png)
+<img src="images/drowsiness_detection.png" width="450">
 
 The system detects prolonged eye closure and excessive yawning and immediately triggers a drowsiness warning.
 
@@ -129,23 +127,15 @@ The system detects prolonged eye closure and excessive yawning and immediately t
 
 ### Yawning Detection
 
-![Yawning Detection](images/yawning_detection.png)
+<img src="images/yawning_detection.png" width="450">
 
-The mouth aspect ratio (MAR) is continuously monitored to identify yawning events in real time.
-
----
-
-### Hardware Integration
-
-![Hardware Integration](images/hardware_setup.png)
-
-The software system is connected to an Arduino Uno board that activates warning indicators and alarms.
+The Mouth Aspect Ratio (MAR) is continuously monitored to identify yawning events in real time.
 
 ---
 
 ### Safe Driving State
 
-![Safe Driving](images/safe_driving.png)
+<img src="images/safe_driving.png" width="450">
 
 When the driver is alert and attentive, the system displays a safe-driving status and activates the green indicator.
 
