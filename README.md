@@ -6,76 +6,60 @@ El-Sewedy University of Technology
 
 ---
 
-## Table of Contents
+## Project Overview
 
-- Project Overview
-- Features
-- System Architecture
-- Technologies Used
-- Datasets
-- Project Structure
-- Installation
-- Usage
-- Results
-- Screenshots
-- Future Work
-- Team Members
-- Supervisor
+Driver drowsiness is one of the leading causes of road accidents worldwide. This project presents an intelligent Driver Drowsiness Detection System that uses Artificial Intelligence and Computer Vision techniques to monitor drivers in real time and detect signs of fatigue before accidents occur.
+
+The system analyzes facial landmarks, eye closure duration, yawning frequency, and head movement patterns. When drowsiness is detected, an alarm is triggered and an Arduino-based warning system is activated to alert the driver.
 
 ---
 
-## Project Overview
+## Hardware Setup
 
-Driver drowsiness is one of the leading causes of road accidents worldwide.
-
-This project presents an intelligent Driver Drowsiness Detection System based on Artificial Intelligence and Computer Vision techniques.
-
-The system continuously monitors the driver's face in real time and detects fatigue indicators such as:
-
-- Eye Closure
-- Yawning
-- Head Movement
-- Facial Landmarks
-
-When drowsiness is detected, the system immediately activates an alarm to alert the driver and help prevent accidents.
+![Hardware Setup](images/hardware_setup.png)
 
 ---
 
 ## Features
 
-✅ Real-Time Face Detection
-
-✅ Eye Closure Detection using EAR
-
-✅ Yawning Detection using MAR
-
-✅ Head Movement Analysis
-
-✅ AI-Based Classification Models
-
-✅ Audible Alarm System
-
-✅ Arduino Integration
-
-✅ Real-Time Monitoring
+- Real-Time Face Detection
+- Eye Closure Detection using EAR (Eye Aspect Ratio)
+- Yawning Detection using MAR (Mouth Aspect Ratio)
+- Facial Landmark Tracking using MediaPipe
+- Drowsiness Alert System
+- Arduino Integration
+- Real-Time Monitoring
+- Visual and Audio Warning System
 
 ---
 
 ## System Architecture
 
-Camera
+Camera Input
+
 ↓
+
 Face Detection
+
 ↓
-MediaPipe Facial Landmarks
+
+Facial Landmark Extraction
+
 ↓
+
 EAR & MAR Calculation
+
 ↓
-AI Models
+
+Drowsiness Analysis
+
 ↓
-Drowsiness Decision
+
+Alert Generation
+
 ↓
-Alarm System
+
+Arduino Warning System
 
 ---
 
@@ -84,29 +68,14 @@ Alarm System
 - Python
 - OpenCV
 - MediaPipe
-- TensorFlow / Keras
+- TensorFlow
+- Keras
 - MobileNetV2
 - YOLOv8
 - Arduino Uno
 - NumPy
 - Scikit-Learn
 - Pygame
-
----
-
-## Datasets
-
-### NTHU-DDD Dataset
-
-Used for driver fatigue detection under different lighting conditions and driver behaviors.
-
-### YawDD Dataset
-
-Used for yawning detection and mouth activity analysis.
-
-### Driver Drowsiness Dataset (DDD)
-
-Used for eye-state classification and fatigue detection.
 
 ---
 
@@ -126,7 +95,8 @@ drowsiness_project/
 ├── evaluate_visual.py
 ├── final_report.py
 ├── requirements.txt
-└── alarm.mp3
+├── alarm.mp3
+└── yolov8n.pt
 ```
 
 ---
@@ -147,46 +117,59 @@ python real_time.py
 
 ---
 
-## Results
+## Project Screenshots
 
-### Performance Metrics
+### Drowsiness Detection
 
-| Metric | Value |
-|----------|----------|
-| Overall Accuracy | 92.8% |
-| Eye Model Accuracy | 95.68% |
-| Yawn Model Accuracy | 92.72% |
-| Inference Speed | 30 FPS |
+![Drowsiness Detection](images/drowsiness_detection.png)
+
+The system detects prolonged eye closure and excessive yawning and immediately triggers a drowsiness warning.
 
 ---
 
-## Screenshots
+### Yawning Detection
 
-### System Workflow
+![Yawning Detection](images/yawning_detection.png)
 
-![Workflow](images/workflow.png)
+The mouth aspect ratio (MAR) is continuously monitored to identify yawning events in real time.
 
-### Real-Time Detection
+---
 
-![Detection](images/detection.png)
+### Hardware Integration
 
-### EAR Detection
+![Hardware Integration](images/hardware_setup.png)
 
-![EAR](images/ear.png)
+The software system is connected to an Arduino Uno board that activates warning indicators and alarms.
 
-### MAR Detection
+---
 
-![MAR](images/mar.png)
+### Safe Driving State
+
+![Safe Driving](images/safe_driving.png)
+
+When the driver is alert and attentive, the system displays a safe-driving status and activates the green indicator.
+
+---
+
+## Results
+
+| Metric | Result |
+|----------|----------|
+| Eye Model Accuracy | 95.68% |
+| Yawn Model Accuracy | 92.72% |
+| Overall System Accuracy | 92.80% |
+| Real-Time Processing | Up to 30 FPS |
 
 ---
 
 ## Future Work
 
 - Night Vision Support
-- NVIDIA Jetson Deployment
 - Driver Distraction Detection
-- Fleet Monitoring System
 - Mobile Application Integration
+- Cloud Monitoring System
+- Fleet Management Integration
+- Embedded System Deployment
 
 ---
 
